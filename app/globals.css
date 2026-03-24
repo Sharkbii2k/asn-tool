@@ -1,6 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{background:#f5f7fb;color:#111827;font-family:Arial,Helvetica,sans-serif}
-.card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
-.btn{border-radius:14px;padding:12px 16px;font-weight:700}.btn-primary{background:#f97316;color:#fff}.btn-secondary{background:#111827;color:#fff}.input{width:100%;border:1px solid #d1d5db;border-radius:14px;padding:12px 14px;background:#fff}.table{width:100%;border-collapse:collapse}.table th,.table td{border-bottom:1px solid #e5e7eb;padding:12px;text-align:left}
+
+html, body {
+  background: #f3f5f9;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+
+.app-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 20px 16px 96px;
+}
+
+.card { @apply rounded-[28px] bg-white border border-brand-line shadow-sm; }
+.input { @apply w-full rounded-3xl border border-brand-line bg-white px-4 py-4 text-base outline-none; }
+.primary-btn { @apply w-full rounded-3xl bg-brand-orange py-4 text-xl font-bold text-white disabled:opacity-50; }
+.secondary-btn { @apply w-full rounded-3xl bg-brand-navy py-4 text-xl font-bold text-white disabled:opacity-50; }
+.small-btn { @apply rounded-2xl border border-brand-line bg-white px-4 py-3 text-sm font-semibold text-slate-700 disabled:opacity-50; }
+.table-wrap { @apply overflow-x-auto rounded-3xl border border-brand-line bg-white; }
+.ui-table { @apply min-w-full border-collapse text-sm; }
+.ui-table th { @apply border-b border-brand-line bg-[#eef5ea] px-3 py-3 text-left font-bold whitespace-nowrap; }
+.ui-table td { @apply border-b border-brand-line px-3 py-3 align-top; }
+.tab-chip { @apply flex-1 rounded-3xl py-4 text-lg font-bold transition-colors; }
+.tab-chip.active { @apply bg-brand-orange text-white; }
+.tab-chip.inactive { @apply text-slate-700; }
+.metric-card { @apply rounded-3xl p-4 text-white shadow-sm; }

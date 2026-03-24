@@ -1,3 +1,18 @@
-import type { Config } from 'tailwindcss'
-const config: Config = { content: ['./app/**/*.{ts,tsx}','./components/**/*.{ts,tsx}'], theme: { extend: {} }, plugins: [] }
-export default config
+import type { Config } from "tailwindcss";
+
+export default {
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          orange: "#ff7a17",
+          navy: "#0b1736",
+          soft: "#f3f5f9",
+          line: "#d8dde8"
+        }
+      }
+    }
+  },
+  plugins: []
+} satisfies Config;
