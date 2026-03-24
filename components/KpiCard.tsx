@@ -1,0 +1,1 @@
+export default function KpiCard({title,value,color}:{title:string,value:string,color:string}){return <div className={`rounded-2xl p-4 text-white shadow ${color}`}><div className="text-sm font-semibold opacity-90">{title}</div><div className="mt-2 text-2xl font-extrabold">{value}</div></div>}

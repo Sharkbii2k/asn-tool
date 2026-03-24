@@ -1,0 +1,3 @@
+import Link from 'next/link'
+const tabs=[{href:'/',label:'Scan ASN'},{href:'/packing',label:'Packing'},{href:'/result',label:'Result'}]
+export default function Nav({active}:{active:string}){return <div className="sticky top-0 z-10 bg-white border-b border-slate-200"><div className="max-w-md mx-auto px-4 py-4"><h1 className="text-3xl font-extrabold text-center">ASN TOOL</h1><div className="mt-4 grid grid-cols-3 gap-2 rounded-2xl bg-slate-100 p-1">{tabs.map(t=><Link key={t.href} href={t.href} className={`text-center rounded-xl py-3 font-bold ${active===t.label?'bg-orange-500 text-white':'text-slate-700'}`}>{t.label}</Link>)}</div></div></div>}
